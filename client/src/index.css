@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 9%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(210, 40%, 98%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222, 84%, 5%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222, 84%, 5%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(222, 84%, 5%);
+  --radius: 0.5rem;
+  
+  /* Custom colors for Kwangsung */
+  --military-gray-50: hsl(210, 20%, 98%);
+  --military-gray-100: hsl(220, 14%, 93%);
+  --military-gray-200: hsl(220, 13%, 91%);
+  --military-gray-300: hsl(216, 12%, 84%);
+  --military-gray-400: hsl(218, 11%, 65%);
+  --military-gray-500: hsl(220, 9%, 46%);
+  --military-gray-600: hsl(215, 14%, 34%);
+  --military-gray-700: hsl(217, 19%, 27%);
+  --military-gray-800: hsl(215, 28%, 17%);
+  --military-gray-900: hsl(221, 39%, 11%);
+  
+  --agri-green-50: hsl(138, 76%, 97%);
+  --agri-green-100: hsl(141, 84%, 93%);
+  --agri-green-200: hsl(141, 79%, 85%);
+  --agri-green-300: hsl(142, 77%, 73%);
+  --agri-green-400: hsl(142, 69%, 58%);
+  --agri-green-500: hsl(142, 71%, 45%);
+  --agri-green-600: hsl(142, 76%, 36%);
+  --agri-green-700: hsl(142, 72%, 29%);
+  --agri-green-800: hsl(143, 64%, 24%);
+  --agri-green-900: hsl(144, 61%, 20%);
+  
+  --tech-blue-500: hsl(213, 94%, 68%);
+  --tech-blue-600: hsl(217, 91%, 60%);
+  --tech-blue-700: hsl(221, 83%, 53%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(0, 0%, 98%);
+  --primary-foreground: hsl(240, 5.9%, 10%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-military-gray-50 { color: hsl(210, 20%, 98%); }
+  .text-military-gray-100 { color: hsl(220, 14%, 93%); }
+  .text-military-gray-200 { color: hsl(220, 13%, 91%); }
+  .text-military-gray-300 { color: hsl(216, 12%, 84%); }
+  .text-military-gray-400 { color: hsl(218, 11%, 65%); }
+  .text-military-gray-500 { color: hsl(220, 9%, 46%); }
+  .text-military-gray-600 { color: hsl(215, 14%, 34%); }
+  .text-military-gray-700 { color: hsl(217, 19%, 27%); }
+  .text-military-gray-800 { color: hsl(215, 28%, 17%); }
+  .text-military-gray-900 { color: hsl(221, 39%, 11%); }
+  
+  .text-agri-green-50 { color: hsl(138, 76%, 97%); }
+  .text-agri-green-100 { color: hsl(141, 84%, 93%); }
+  .text-agri-green-200 { color: hsl(141, 79%, 85%); }
+  .text-agri-green-300 { color: hsl(142, 77%, 73%); }
+  .text-agri-green-400 { color: hsl(142, 69%, 58%); }
+  .text-agri-green-500 { color: hsl(142, 71%, 45%); }
+  .text-agri-green-600 { color: hsl(142, 76%, 36%); }
+  .text-agri-green-700 { color: hsl(142, 72%, 29%); }
+  .text-agri-green-800 { color: hsl(143, 64%, 24%); }
+  .text-agri-green-900 { color: hsl(144, 61%, 20%); }
+  
+  .text-tech-blue-500 { color: hsl(213, 94%, 68%); }
+  .text-tech-blue-600 { color: hsl(217, 91%, 60%); }
+  .text-tech-blue-700 { color: hsl(221, 83%, 53%); }
+  
+  .bg-military-gray-50 { background-color: hsl(210, 20%, 98%); }
+  .bg-military-gray-100 { background-color: hsl(220, 14%, 93%); }
+  .bg-military-gray-200 { background-color: hsl(220, 13%, 91%); }
+  .bg-military-gray-300 { background-color: hsl(216, 12%, 84%); }
+  .bg-military-gray-400 { background-color: hsl(218, 11%, 65%); }
+  .bg-military-gray-500 { background-color: hsl(220, 9%, 46%); }
+  .bg-military-gray-600 { background-color: hsl(215, 14%, 34%); }
+  .bg-military-gray-700 { background-color: hsl(217, 19%, 27%); }
+  .bg-military-gray-800 { background-color: hsl(215, 28%, 17%); }
+  .bg-military-gray-900 { background-color: hsl(221, 39%, 11%); }
+  
+  .bg-agri-green-50 { background-color: hsl(138, 76%, 97%); }
+  .bg-agri-green-100 { background-color: hsl(141, 84%, 93%); }
+  .bg-agri-green-200 { background-color: hsl(141, 79%, 85%); }
+  .bg-agri-green-300 { background-color: hsl(142, 77%, 73%); }
+  .bg-agri-green-400 { background-color: hsl(142, 69%, 58%); }
+  .bg-agri-green-500 { background-color: hsl(142, 71%, 45%); }
+  .bg-agri-green-600 { background-color: hsl(142, 76%, 36%); }
+  .bg-agri-green-700 { background-color: hsl(142, 72%, 29%); }
+  .bg-agri-green-800 { background-color: hsl(143, 64%, 24%); }
+  .bg-agri-green-900 { background-color: hsl(144, 61%, 20%); }
+  
+  .bg-tech-blue-500 { background-color: hsl(213, 94%, 68%); }
+  .bg-tech-blue-600 { background-color: hsl(217, 91%, 60%); }
+  .bg-tech-blue-700 { background-color: hsl(221, 83%, 53%); }
+  
+  .border-military-gray-200 { border-color: hsl(220, 13%, 91%); }
+  .border-military-gray-300 { border-color: hsl(216, 12%, 84%); }
+  .border-agri-green-200 { border-color: hsl(141, 79%, 85%); }
+  .border-agri-green-500 { border-color: hsl(142, 71%, 45%); }
+  .border-tech-blue-200 { border-color: hsl(213, 94%, 85%); }
+  
+  /* 3D Animation Utilities */
+  .transform-gpu {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /* Floating animation keyframes */
+  @keyframes float-gentle {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+  }
+  
+  @keyframes rotate-3d {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    50% { transform: rotateX(180deg) rotateY(180deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.6); }
+  }
+  
+  .animate-float-gentle {
+    animation: float-gentle 6s ease-in-out infinite;
+  }
+  
+  .animate-rotate-3d {
+    animation: rotate-3d 20s linear infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+}
